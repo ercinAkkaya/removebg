@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+python-multipart
+pillow
+numpy
+rembg[cpu]>=2.0.57
