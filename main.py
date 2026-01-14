@@ -24,7 +24,7 @@ sess_opts.enable_cpu_mem_arena = False
 # Optional: Graph optimization reduces memory usage slightly
 sess_opts.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_BASIC
 
-model_name = "birefnet-general"
+model_name = "isnet-general-use"
 print(f"Initializing rembg session with model: {model_name}...")
 # Pass the custom session options
 session = new_session(model_name, providers=["CPUExecutionProvider"], session_options=sess_opts)

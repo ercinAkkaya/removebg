@@ -21,7 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Run a one-liner to pre-download the model into the container.
 # This ensures the model is "baked in" to the Docker image, avoiding
 # download delays or timeouts during Cloud Run cold starts.
-RUN python -c "from rembg import new_session; new_session('birefnet-general')"
+RUN python -c "from rembg import new_session; new_session('isnet-general-use')"
 
 # Copy the rest of the application code
 COPY . .
