@@ -30,6 +30,12 @@ print(f"Initializing rembg session with model: {model_name}...")
 session = new_session(model_name, providers=["CPUExecutionProvider"], session_options=sess_opts)
 print("Rembg session initialized successfully.")
 
+# --- PING (HEARTBEAT) ENDPOINT ---
+# Cloud Scheduler burayı dürtükleyince "Ayaktayım" diyecek.
+@app.get("/")
+async def health_check():
+    return {"status": "I am alive and warm!"}
+
 @app.post("/remove-bg")
 async def remove_bg(file: UploadFile = File(...)):
     """
